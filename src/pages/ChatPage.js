@@ -17,7 +17,7 @@ const ChatPage = () => {
             setIsTyping(true);
 
             try {
-                const response = await fetch('http://localhost:3001/api/addtext', {
+                const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/addtext`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
